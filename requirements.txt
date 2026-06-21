@@ -1,0 +1,7 @@
+langchain
+langchain-groq 
+langchain-community
+fastapi
+uvicorn 
+pydantic 
+jinja2
