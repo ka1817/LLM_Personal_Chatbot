@@ -155,11 +155,12 @@ body {
 }
 
 .bot-msg {
-  background: #e5edff;
+  background: transparent;
+  border: none;
   padding: 8px 12px;
-  border-radius: 10px;
   margin: 4px 0;
   max-width: 90%;
+  align-self: flex-start; 
   line-height: 1.4;
   display: inline-block;
   word-wrap: break-word;
@@ -167,23 +168,25 @@ body {
 }
 
 .user-msg {
-  background: #d1fae5;
-  padding: 8px 12px;
-  border-radius: 10px;
-  margin: 4px 0;
-  max-width: 90%;
-  align-self: flex-start;
-  text-align: left;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white; 
+  padding: 10px 15px;
+  border-radius: 16px 16px 2px 16px; 
+  margin: 6px 0;
+  max-width: 85%;
+  align-self: flex-end; 
+  text-align: left; 
   line-height: 1.4;
   display: inline-block;
   word-wrap: break-word;
   overflow-wrap: anywhere;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 .thinking {
   font-style: italic;
   color: #666;
-  background: #f3f4f6;
+  background: transparent;
   animation: blink 1.2s infinite;
   align-self: flex-start;
   text-align: left;
@@ -237,7 +240,7 @@ body {
   margin: 6px 0;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.4s;
   text-align: center;
   word-wrap: break-word;
   white-space: normal;
@@ -245,4 +248,25 @@ body {
 
 .option-btn:hover {
   background: #dbeafe;
+}
+
+/* --- Markdown Formatting Adjustments --- */
+.bot-msg p, 
+.bot-msg ul, 
+.bot-msg ol {
+  margin: 0 0 10px 0;
+}
+
+.bot-msg p:last-child, 
+.bot-msg ul:last-child, 
+.bot-msg ol:last-child {
+  margin-bottom: 0;
+}
+
+.bot-msg li {
+  margin-bottom: 6px;
+}
+
+.bot-msg strong {
+  color: #111827; 
 }
